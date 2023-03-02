@@ -1,8 +1,11 @@
 const express = require("express");
+const { connectToDb } = require("./db");
 require("dotenv").config();
 
 const app = express();
 const PORT = 4000;
+
+connectToDb();
 
 app.use(express.urlencoded({extended: true}))
 

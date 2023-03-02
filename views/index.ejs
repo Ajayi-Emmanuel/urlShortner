@@ -50,12 +50,12 @@
     <h1>url Shortners</h1>
     <div id="container">
         <form action="" method="post">
-            <input type="text" name="longurl" placeholder="enter url here" class="form-label">
+            <input type="text" name="fullurl" placeholder="enter url here" class="form-label">
             <input type="text" name="shorturl" placeholder="enter custom url" class="form-label">
             <div class="btn">
                 <button href="/" type="submit">Shorten</button>
             </div>
-            <p class="form-label" id="result"></p>
+            <a href="<%= shorturl.shorturl%>" class="form-label" id="result"> <%=shorturl.shorturl%> </a>
         </form>
     </div>
 </body>
