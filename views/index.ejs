@@ -4,59 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>URL || SHORTNER</title>
-
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-        }
-        #container{
-            /* border: 1px solid red; */
-            width: 1200px;
-            max-width: 100%;
-            height: 200px;
-            margin: 100px auto;
-        }
-        h1{
-            font-family: monospace;
-            font-size: 60px;
-            /* border: 1px solid black; */
-            margin: 0 450px;
-        }
-        form{
-            border: 1px solid green;
-            width: 50%;
-            display: block;
-            margin: 0 auto;
-        }
-        .form-label{
-            /* border: 1px solid red; */
-            width: 50%;
-            padding: 10px;
-            border-radius: 10px;
-            margin: 15px auto;
-        }
-        .btn button{
-            text-decoration: none;
-            color: white; 
-            border-radius: 10px;
-            padding: 10px;
-            background-color: black;
-        }
-    </style>
 </head>
 <body>
     <h1>url Shortners</h1>
     <div id="container">
         <form action="" method="post">
-            <input type="text" name="fullurl" placeholder="enter url here" class="form-label">
-            <input type="text" name="shorturl" placeholder="enter custom url" class="form-label">
-            <div class="btn">
-                <button href="/" type="submit">Shorten</button>
-            </div>
-            <a href="<%= shorturl.shorturl%>" class="form-label" id="result"> <%=shorturl.shorturl%> </a>
-        </form>
+            <input type="text" name="fullurl" placeholder="enter url here" class="form-label" required>
+            <input type="text" name="shorturl" placeholder="enter custom url" class="form-label" required>
+            <button type="submit" class="btn">Shorten</button>
+
+            <% if(check == true){ %>
+                <a href="<%= urlDetail.fullurl %>" class="form-label short" id="result"><span>Output:</span> <%=urlDetail.shorturl%></a>
+            <% } %>
+            </form>
     </div>
 </body>
 </html> 

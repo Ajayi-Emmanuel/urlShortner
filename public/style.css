@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(243, 238, 238);
+}
+#container{
+    width: 700px;
+    max-width: 100%;
+    margin: 100px auto;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(71, 104, 131);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+input{
+    border-radius: 15px;
+    background-color: rgb(61, 57, 57);
+    color: white;
+}
+.form-label{
+    padding: 15px;
+    margin: 15px auto;
+    width: 50%;
+    outline: none;
+}
+
+input::placeholder{
+    color: rgb(192, 186, 186);
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.btn{
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    padding: 13px;
+    margin: 15px auto;
+    width: 30%;
+    background-color: rgb(83, 81, 81);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.short{
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.short > span{
+    background-color: rgb(56, 54, 54);
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    #container{
+        padding: 0;
+    }
+    .form-label{
+        width: 80%;
+    }
+}
